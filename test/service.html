@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../sdk/ocmoon.sdk.1.0.js"></script>
+    <script src="../plugins/utils.js"></script>
+    <script src="../plugins/base-event.js"></script>
+    <script src="../plugins/service.js"></script>
+    <script>
+        if(window.OcmoonContext){
+            var ctx = new OcmoonContext.Service({
+                url: 'https://webrtc.yunqu-info.com/epauthgw/openApi'
+            });
+            ctx.bindEvent('ready', function(){
+                console.log('ready')
+            });
+            ctx.start();
+        }
+    </script>
+</body>
+</html>

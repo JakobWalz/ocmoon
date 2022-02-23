@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../sdk/ocmoon.sdk.1.0.js"></script>
+    <script src="../plugins/utils.js"></script>
+    <script src="../plugins/base-event.js"></script>
+    <script>
+        if(window.OcmoonContext){
+            var be = new OcmoonContext.BaseEvent();
+            be.bindEvent('ready', function(){
+
+            });
+            be.bindEvent({
+                fail: function(){},
+                error: function(){}
+            });
+            be.bindEvent('say', function(){}, true);
+        }
+    </script>
+</body>
+</html>
